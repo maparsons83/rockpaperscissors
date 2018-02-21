@@ -1,5 +1,6 @@
 body {
     background-color: beige;
+
 }
 
 td {
@@ -25,6 +26,7 @@ p {
     font-weight: bold;
     font-size: x-large;
     text-align: center;
+    text-decoration: underline;
 }
 
 button {
@@ -32,4 +34,14 @@ button {
     width: 200px;
     margin: 10px;
     font-size: large;
+    border-radius: 25px;
+    box-shadow: 10px 10px;
+}
+
+#picture {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Rock-paper-scissors.svg/2000px-Rock-paper-scissors.svg.png');
+    width: 625px;
+    height: 600px;
+    margin: 0px auto;
+    background-size: cover;
 }

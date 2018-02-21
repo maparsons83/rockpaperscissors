@@ -24,9 +24,7 @@ var click = function(event) {
     var compare = function(user,computer) {
         console.log(user)
         console.log(computer)
-        // if (user === computer) {
-        //     alert('Its a tie!');
-        // }
+     
         if (user === 'Rock') {
             if (computer === 'Scissors') {
                 alert('User Wins!');
