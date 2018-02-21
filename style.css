@@ -43,5 +43,15 @@ button {
     width: 625px;
     height: 600px;
     margin: 0px auto;
-    background-size: cover;
+    background-size: 525px 500px;
+    background-repeat: no-repeat;
+    -webkit-animation: rotation 20s infinite linear;
+}
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
 }

@@ -22,8 +22,8 @@ var click = function(event) {
 
 
     var compare = function(user,computer) {
-        console.log(user)
-        console.log(computer)
+        console.log(user + '-User')
+        console.log(computer + '-Computer')
      
         if (user === 'Rock') {
             if (computer === 'Scissors') {
