@@ -11,6 +11,11 @@ td {
     text-align: center;
 }
 
+div {
+
+    text-align: center;
+}
+
 table {
     margin: 0px auto;
     border: 1px solid black;
@@ -20,4 +25,11 @@ p {
     font-weight: bold;
     font-size: x-large;
     text-align: center;
+}
+
+button {
+    height: 100px;
+    width: 200px;
+    margin: 10px;
+    font-size: large;
 }

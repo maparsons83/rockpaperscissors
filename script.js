@@ -1,7 +1,11 @@
 var newArray = ['Rock', 'Paper', 'Scissors'] 
 
 
-function choice2() {
+var click = function(event) {
+    var computer = Math.floor(Math.random()*3);
+    var user = event.target;
+    var userChoice = user.innerHTML;
+    var choices = document.getElementsByClassName('choices');
     if (computer === 0) {
         computer = 'Rock'
     }
@@ -13,35 +17,52 @@ function choice2() {
     else {
         computer = 'Scissors'
     }
+    compare(userChoice,computer)
 }
 
-var compare = function(choice1,choice2) {
-    if (choice1 === choice2) {
-        alert('Its a tie!');
+
+    var compare = function(user,computer) {
+        console.log(user)
+        console.log(computer)
+        // if (user === computer) {
+        //     alert('Its a tie!');
+        // }
+        if (user === 'Rock') {
+            if (computer === 'Scissors') {
+                alert('User Wins!');
+            }
+            else if(user === computer) {
+                alert('Its a tie!')
+            }
+            else{
+                alert('Computer Wins!');
+            }
+        }
+        if (user === 'Paper') {
+            if(computer === 'Rock') {
+                alert('User Wins!')
+            }
+            else if(user === computer) {
+                alert('Its a tie!')
+            }
+            else{
+                alert('Computer Wins')
+            }
+        }
+        if(user === 'Scissors') {
+            if(computer === 'Rock') {
+                alert('Computer Wins!')
+            }
+            else if(user === computer) {
+                alert('Its a tie!')
+            }
+            else{
+                alert('User Wins!')
+            }
+        }
     }
-    if (choice1 === 'Rock') {
-        if (choice2 === 'Scissors') {
-            alert 'Rock Wins!'
-        }
-        else{
-            alert('Paper Wins!');
-        }
+    var button = document.querySelectorAll('button');
+
+    for(var i = 0; i < button.length; i++) {
+        button[i].addEventListener('click', click);
     }
-    if (choice1 === 'Paper') {
-        if(choice2 === 'Rock') {
-            alert('Paper Wins!')
-        }
-        else{
-            alert('Scissors Wins')
-        }
-    }
-    if(choice1 === 'Scissors') {
-        if(choice2 === 'Rock') {
-            alert('Rock Wins!')
-        }
-        else{
-            alert('Scissors Wins!')
-        }
-    }
-}
-compare(user,computer)
