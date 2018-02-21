@@ -6,6 +6,7 @@ var click = function(event) {
     var user = event.target;
     var userChoice = user.innerHTML;
     var choices = document.getElementsByClassName('choices');
+    
     if (computer === 0) {
         computer = 'Rock'
     }
@@ -17,6 +18,10 @@ var click = function(event) {
     else {
         computer = 'Scissors'
     }
+    let destination = document.getElementById('result');
+    const div = document.createElement('div');
+    div.textContent = computer;
+    result.appendChild(div);
     compare(userChoice,computer)
 }
 
